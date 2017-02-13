@@ -1,6 +1,6 @@
 package by.epam.jmp.task01;
 
-import by.epam.jmp.task01.calc.AbstractCalculator;
+import by.epam.jmp.task01.calc.Calculate;
 import by.epam.jmp.task01.calc.impl.factory.CalculatorFactory;
 
 import java.io.File;
@@ -20,7 +20,7 @@ public class Main {
         int calculatorType = Integer.parseInt(data.get(0));
         data.remove(0);
 
-        AbstractCalculator calculator = CalculatorFactory.getCalculator(calculatorType);
+        Calculate calculator = CalculatorFactory.getCalculator(calculatorType);
         double result = calculator.performBatch(data);
 
         System.out.println("result: " + result);
